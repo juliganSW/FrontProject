@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleDEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./img/Crypto-Logo-Basic-Attention-token-Pile-Graphics-13644267-1.png" alt="crypto-logo">
+        <h1>SimpleDEX</h1>
+    </header>
+
+    <div class="container">
+        <h2>Connect Wallet</h2>
+        <button id="connectButton">Connect to MetaMask 🦊</button>
+        <p id="walletAddress">Wallet Address: <span style="color: red">Not Connected</span></p>
+
+        <h2>Balances</h2>
+        <p id="balanceTokenA">TokenA Balance: 0</p>
+        <p id="balanceTokenB">TokenB Balance: 0</p>
+
+        <!-- Section for Minting Tokens -->
+        <h2>Mint Tokens</h2>
+        <div class="form-group">
+            <label for="mintAmountA">Amount of TokenA to Mint:</label>
+            <input type="number" id="mintAmountA" min="0">
+            <small id = "mintAValidMsg"></small>
+            <small id = "mintAInvalidMsg"></small>
+            <button onclick="mintTokenA()">Mint TokenA</button>
+        </div>
+        <div class="form-group">
+            <label for="mintAmountB">Amount of TokenB to Mint:</label>
+            <input type="number" id="mintAmountB" min="0">
+            <small id ="mintBValidMsg"></small>
+            <small id ="mintBInvalidMsg"></small>
+            <button onclick="mintTokenB()">Mint TokenB</button>
+        </div>
+
+        <!-- Section for Approve Tokens -->
+         <h2>Approve</h2>
+        <div class="form-group">
+            <label for="amountToApprove">Amount to approve:</label>
+            <input type="number" id="amountToApprove" min="0">
+        
+            <label for="tokenSelect">Select Token:</label>
+            <select id="tokenSelect">
+                <option value="TokenA">TokenA</option>
+                <option value="TokenB">TokenB</option>
+            </select>
+         <button onclick="approveTokens()">Approve</button>
+        </div>
+        
+      <!-- Section for Adding Liquidity -->
+        <h2>Add Liquidity</h2>
+        <small id="liquidityInvalidMsg"></small>
+        <button id="addLiquidityButton" onclick="addLiquidity()">Add Liquidity</button>
+        
+         <!--Section for remove liquidity-->
+        <h2>Remove liquidity</h2>
+        <div class="form-group">
+        <label for="amountToRemoveA">Amount TokenA:</label>
+        <input type="number" id="amountToRemoveA" min="0">
+        </div>
+        <div class="form-group">
+        <label for="amountToRemoveB">Amount TokenB:</label>
+        <input type="number" id="amountToRemoveB" min="0">
+        </div>
+        <small id = "liquidityRmvInvalidMsg"></small>
+        <button id="removeLiquidityButton">Remove Liquidity</button>
+
+       <!-- Section for Swap Tokens -->
+<h2>Swap Tokens</h2>
+<div class="form-group">
+    <label for="swapAmountA">Amount of TokenA to Swap for TokenB:</label>
+    <input type="number" id="swapAmountA" min="0">
+    <small id = "swapAforBInvalidMsg"></small>
+    <button id="swapButton">Swap A for B</button>
+</div>
+<div class="form-group">
+    <label for="swapAmountB">Amount of TokenB to Swap for TokenA:</label>
+    <input type="number" id="swapAmountB" min="0">
+    <small id ="swapBforAInvalidMsg"></small>
+    <button id="swapButtonB">Swap B for A</button>
+</div>
+
+
+        <!-- Section for Token Prices -->
+        <h2>Token Prices</h2>
+        <button id="getPriceButton" onclick="getPrice()">Get Token Prices</button>
+        <p style="color : #39f2ae" id="priceInfo">Price Info: </p>
+        <p id="tokenA"></p>
+        <p id="tokenB"></p>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>

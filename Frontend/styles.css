@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #323941;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #b1b5c0;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+  h1{
+        font-size: 2.5rem;
+        font-style: oblique;
+        color: #39f2ae;
+        text-shadow: 5px 5px 10px #000000;}
+    }
+
+img{
+    width: 140px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    color:#ffffff;
+    background-color: #282f445f;
+    box-shadow: 0 0 0px 1px #39f2ae,
+    0 0 10px 2px #39f2ae;
+    border-radius: 8px;
+}
+.container {
+    h2{
+        color: #39f2ae;
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #323941;
+    border-style: none;
+    border: 1px solid #39f2ae;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+#tokenSelect {
+    width: 200px; /* Ancho del select */
+    height: 40px; /* Altura del select */
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 5px; /* Espaciado interno */
+    margin-right: 1rem;
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #39f2ae; /* Borde gris claro */
+    background-color: #323941; /* Fondo claro */
+    color: #ffffff; /* Color del texto */
+    cursor: pointer; /* Cambiar cursor al pasar */
+}
+
+#tokenSelect:focus {
+    border-color: #39f2ae; /* Borde azul cuando está enfocado */
+    outline: none; /* Eliminar el contorno por defecto */
+}
+
+
+button {
+    padding: 10px 15px;
+    background: transparent;
+    color: white;
+    border: 2px solid #39f2ae;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover {
+    box-shadow: 0 0 0px 1px #39f2ae,
+    0 0 10px 2px #39f2ae,
+    inset 0 0 0px 1px #39f2ae,
+    inset 0 0 15px 2px #39f2ae;
+}
